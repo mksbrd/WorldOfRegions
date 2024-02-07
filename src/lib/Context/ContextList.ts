@@ -1,7 +1,14 @@
 import React from "react";
-import {NavigationContext} from "./DefaultContextValues";
+import {MainPageContext, NavigationContext} from "./DefaultContextValues";
 
-export const Navigation__Context = React.createContext(NavigationContext)
+
+const Navigation__Context = React.createContext(NavigationContext)
+const Main__Page__Context = React.createContext(MainPageContext)
+
+export {
+    Navigation__Context,
+    Main__Page__Context
+}
 
 
 export type ContextProviderProps = {

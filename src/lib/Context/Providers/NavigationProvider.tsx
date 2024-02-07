@@ -1,4 +1,4 @@
-import {ContextProviderProps, Navigation__Context} from "./ContextList";
+import {ContextProviderProps, Navigation__Context} from "../ContextList";
 import {useState} from "react";
 
 const NavigationProvider = (

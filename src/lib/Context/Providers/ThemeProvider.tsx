@@ -1,7 +1,7 @@
 import {ThemeProvider} from "styled-components";
-import {ContextProviderProps} from "./ContextList";
+import {ContextProviderProps} from "../ContextList";
 import {useEffect} from "react";
-import {DARK_THEME} from "../Style/Themes";
+import {DARK_THEME} from "../../Style/Themes";
 
 
 const ThemeProviderContext = (
