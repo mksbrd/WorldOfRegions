@@ -23,7 +23,7 @@ export type DrawerProps = {
     controls?: React.ReactElement | undefined
     children: React.ReactNode
     onClose?: () => void
-    title?: string
+    title?: any
     clickOutsideIgnoreElements?: any[]
     isOpen?: boolean
     top?: number

@@ -22,7 +22,7 @@ const Drawer__Header = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
   border-bottom: 1px solid ${({theme}) => theme.borderColor};
 `;
 
