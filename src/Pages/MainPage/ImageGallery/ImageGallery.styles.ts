@@ -22,6 +22,7 @@ const Swipe__Slide__Content__Holder = styled(FlexBox)`
   height: auto;
   position: relative;
   flex-wrap: nowrap;
+  cursor: pointer;
 `
 const Images__Navigation__Dots = styled(FlexBox)`
   position: absolute;
@@ -57,8 +58,11 @@ const Slide__Additional__Content__Holder = styled(FlexBox)`
   left: 0px;
 `
 const Image__Slide__Title = styled(Text)`
+  color: ${({theme}) => theme.color};
   font-size: 4vw;
   font-weight: bold;
+  cursor: pointer;
+
   @media (min-width: 1100px) {
     font-size: 54px;
   }
@@ -81,9 +85,17 @@ const Image__Slide__Description = styled(Text)`
     font-size: 15px;
   }
 `
+const Image__SEO = styled.a`
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  z-index: -9999;
+
+`
 
 
 export const Styled = {
+    Image__SEO,
     Image__Slide__Description,
     Image__Slide__Title,
     Slide__Additional__Content__Holder,
