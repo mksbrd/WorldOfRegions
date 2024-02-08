@@ -1,5 +1,9 @@
 import PageHolder from "../../lib/UI/PageHolder";
 import ImageGallery from "./ImageGallery";
+import FirstArticles from "./FirstArticles";
+import {Main__Page__Context} from "../../lib/Context/ContextList";
+import {Styled} from "./MainPage.styles";
+import SideData from "./SideData";
 
 const MainPage = () => {
 
@@ -34,16 +38,81 @@ const MainPage = () => {
             title: 'Discover The History Of Empire',
             image: 'https://study.gov.pl/sites/default/files/ostap-senyuk-7rcdqeuq1rg-unsplash_0.jpg'
         }
-
     ]
+
+    const firstArticles: any = {
+        title: "As Warm As It Gets This Part Of Year",
+        list: [
+            {
+                title: "Unveiling the Allure of Santorini's Timeless Elegance",
+                image: 'https://a.cdn-hotels.com/gdcs/production18/d1838/041ae6b1-0a88-4c22-a648-53a22dd4a006.jpg',
+                location: 'Greece • Santorini',
+            },
+            {
+                title: "A Journey through the Enchanting Landscapes of Hawaii's Tropical Paradise",
+                image: 'https://cdn.aarp.net/content/dam/aarp/travel/Domestic/2021/12/1140-oahu-hero.jpg',
+                location: 'USA • Hawaii',
+            },
+            {
+                title: "Exploring the Extravagance of the City of Gold",
+                image: 'https://dubaitickets.tours/wp-content/uploads/2023/03/ain-dubai-ferris-wheel.jpg',
+                location: 'UAE • Dubai',
+            },
+            {
+                title: "A Tapestry of Art, Architecture, and Mediterranean Charm",
+                image: 'https://www.spain.info/.content/imagenes/cabeceras-grandes/cataluna/park-guell-barcelona-s-305364611.jpg',
+                location: 'Spain • Barcelona',
+            },
+
+        ]
+    }
+
+    const SideContent: any = {
+        quickIdeas: [
+            {
+                image: 'https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blt7d0d1c86efe4f725/6181151eef82350e50b94059/UK_Madrid_Spain_Header.jpg',
+                location: 'Spain',
+                title: 'Try Delicious Spanish food',
+                link: 'https://bookbrd.com'
+            },
+            {
+                image: 'https://images.prismic.io/visiticeland/4007a9bd-142a-4bc8-8d62-2895238851b4_hvammsvik%20hot%20springs.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&w=1748&h=1094',
+                location: 'Iceland',
+                title: 'Follow The Trails Of Nature',
+                link: 'https://bookbrd.com'
+            },
+            {
+                image: 'https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blt7d0d1c86efe4f725/6181151eef82350e50b94059/UK_Madrid_Spain_Header.jpg',
+                location: 'Portugal',
+                title: 'Experience Fado Live In Bar By The Sea',
+                link: 'https://bookbrd.com'
+            },
+            {
+                image: 'https://cms.accuweather.com/wp-content/uploads/2023/05/cnn-L19jb21wb25lbnRzL2ltYWdlL2luc3RhbmNlcy9jbGhzeXQybHcwMDI2MjZxaDhoZjk1MjMx-L19wYWdlcy9jbGhzeXQybDIwMDFsMjZxaGR2cG84d3Q0.jpg',
+                location: 'Maldives',
+                title: 'Sun, Beach, Good Food, Beautiful View Everything You Can Desire',
+                link: 'https://bookbrd.com'
+            },
+        ]
+    }
+
+    const mainPageContextValue = {
+        SideContent,
+        imagesList,
+        firstArticles
+    }
 
 
     return (
-        <PageHolder>
-            <ImageGallery
-                slidesList={imagesList}
-            />
-        </PageHolder>
+        <Main__Page__Context.Provider value={mainPageContextValue as any}>
+            <PageHolder>
+                <ImageGallery/>
+                <Styled.Main__Page__Lower__Content__Holder>
+                    <FirstArticles/>
+                    <SideData/>
+                </Styled.Main__Page__Lower__Content__Holder>
+            </PageHolder>
+        </Main__Page__Context.Provider>
     )
 }
 

@@ -4,15 +4,17 @@ import {Styled} from "./Swiper.styles";
 
 type ButtonProps = {
     onClick: (event: any) => void
+    isDark?: boolean
 }
 
-const NextButton = ({onClick}: ButtonProps) => {
+const NextButton = ({onClick, isDark}: ButtonProps) => {
 
     if (isMobileOnly) {
         return null
     }
     return (
         <Styled.Next__Button
+            isDark={!!isDark}
             onClick={onClick}
         >
             <Styled.Direction__Button__Icon
@@ -21,13 +23,14 @@ const NextButton = ({onClick}: ButtonProps) => {
         </Styled.Next__Button>
     )
 }
-const PrevButton = ({onClick}: ButtonProps) => {
+const PrevButton = ({onClick, isDark}: ButtonProps) => {
 
     if (isMobileOnly) {
         return null
     }
     return (
         <Styled.Prev__Button
+            isDark={!!isDark}
             onClick={onClick}
         >
             <Styled.Direction__Button__Icon

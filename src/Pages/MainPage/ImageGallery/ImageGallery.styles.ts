@@ -64,7 +64,7 @@ const Image__Slide__Title = styled(Text)`
   cursor: pointer;
 
   @media (min-width: 1100px) {
-    font-size: 54px;
+    font-size: 44px;
   }
   @media (max-width: 800px) {
     font-size: 30px;
@@ -76,7 +76,7 @@ const Image__Slide__Title = styled(Text)`
 const Image__Slide__Description = styled(Text)`
   font-size: 2vw;
   @media (min-width: 1100px) {
-    font-size: 34px;
+    font-size: 22px;
   }
   @media (max-width: 800px) {
     font-size: 20px;

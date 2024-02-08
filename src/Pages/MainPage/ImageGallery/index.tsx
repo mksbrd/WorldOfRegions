@@ -2,16 +2,11 @@ import {Styled} from "./ImageGallery.styles"
 import {defaultSliderState, SwiperContainer, SwiperSlide} from "../../../lib/UI/Swiper";
 import {useEffect, useRef, useState} from "react";
 import moment from "moment";
+import useMainPage from "../useMainPage";
 
-type ImageGalleryProps = {
-    slidesList: any[]
-}
+const ImageGallery = () => {
 
-const ImageGallery = (
-    {
-        slidesList
-    }: ImageGalleryProps
-) => {
+    const {imagesList} = useMainPage()
 
     const [galleryControls, setGalleryControls] = useState<any>({
         lastChange: undefined
@@ -29,14 +24,14 @@ const ImageGallery = (
             progress: swiper.progress,
             index: swiper?.activeIndex,
         }));
-    };
-
-    const onDotsChangeHandler = (index: number) => {
-        swiperRef.current.swiper.slideTo(index);
         setGalleryControls((state: any) => ({
             ...state,
             lastChange: moment()
         }))
+    };
+
+    const onDotsChangeHandler = (index: number) => {
+        swiperRef.current.swiper.slideTo(index);
     }
 
     const onImageClickHandler = (link: string) => {
@@ -55,11 +50,7 @@ const ImageGallery = (
         }
         const numberOfSeconds = moment().diff(galleryControls.lastChange, 'seconds')
         if (numberOfSeconds > 5) {
-            const nextNumber = sliderState.index + 1 > slidesList.length - 1 ? 0 : sliderState.index + 1
-            setGalleryControls((state: any) => ({
-                ...state,
-                lastChange: moment()
-            }))
+            const nextNumber = sliderState.index + 1 > imagesList.length - 1 ? 0 : sliderState.index + 1
             swiperRef.current.swiper.slideTo(nextNumber, nextNumber === 0 ? 600 : 300);
         }
         setTimeout(() => {
@@ -74,7 +65,7 @@ const ImageGallery = (
                 onActiveIndexChange={onActiveIndexChange}
                 ref={swiperRef}
             >
-                {slidesList.map((slideOption: any, index: number) => (
+                {imagesList.map((slideOption: any, index: number) => (
                         <SwiperSlide
                             key={`slide_${slideOption.title}_${index}`}
                         >
@@ -103,14 +94,13 @@ const ImageGallery = (
                 )}
             </SwiperContainer>
             <Styled.Images__Navigation__Dots>
-                {slidesList.map((image: any, index: number) => (
+                {imagesList.map((image: any, index: number) => (
                     <Styled.Image__Navigation__Dot
                         key={`image_gallery_navi_dot_${image.title}`}
                         onClick={() => onDotsChangeHandler(index)}
                         isFocused={sliderState.index === index}
                     />
                 ))}
-
             </Styled.Images__Navigation__Dots>
         </Styled.Image__Gallery__Holder>
     )
