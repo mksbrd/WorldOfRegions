@@ -1,5 +1,4 @@
 import {Styled} from "./Navigation.styles"
-import {faTrashCan} from "@fortawesome/pro-light-svg-icons";
 
 type DropDownProps = {
     list: any[]
@@ -15,7 +14,7 @@ const NavigationToolTipContents = (
             {list.map((option: any) => (
                 <Styled.Navigation__Drop__Down__Option>
                     <Styled.Navigation__Drop__Down__Icon
-                        icon={faTrashCan}
+                        icon={option.icon}
                     />
                     {option.title}
                 </Styled.Navigation__Drop__Down__Option>

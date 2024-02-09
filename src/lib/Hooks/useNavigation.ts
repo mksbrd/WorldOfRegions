@@ -1,5 +1,16 @@
 import {useContext} from "react";
 import {Navigation__Context} from "../Context/ContextList";
+import {
+    faGlobeAfrica,
+    faGlobeAmericas,
+    faGlobeAsia,
+    faGlobeEurope,
+    faGlobeOceania,
+    faLightbulb,
+    faMagnifyingGlass,
+    faNewspaper,
+    faUserTie
+} from "@fortawesome/pro-light-svg-icons";
 
 const useNavigation = () => {
 
@@ -18,17 +29,53 @@ const useNavigation = () => {
             label: 'Discover',
             list: [
                 {
-                    title: "Countries"
+                    title: 'Latest Articles',
+                    icon: faNewspaper
+                },
+                {
+                    title: 'Travel Tips',
+                    icon: faLightbulb
+                },
+                {
+                    title: "Where To Go",
+                    icon: faMagnifyingGlass
+                },
+
+            ]
+        },
+        {
+            label: 'World',
+            list: [
+                {
+                    title: 'Europe',
+                    icon: faGlobeEurope
+                },
+                {
+                    title: 'Asia',
+                    icon: faGlobeAsia
+                },
+                {
+                    title: 'Africa',
+                    icon: faGlobeAfrica
+                },
+                {
+                    title: 'America',
+                    icon: faGlobeAmericas
+                },
+                {
+                    title: 'Oceania',
+                    icon: faGlobeOceania
                 }
             ]
         },
         {
-            label: 'Exotic',
-            list: []
-        },
-        {
-            label: 'World',
-            list: []
+            label: 'Business',
+            list: [
+                {
+                    title: 'Admin Panel',
+                    icon: faUserTie
+                }
+            ]
         }
 
     ]

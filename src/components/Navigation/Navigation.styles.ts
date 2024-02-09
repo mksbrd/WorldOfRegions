@@ -23,17 +23,17 @@ const Navigation__Content__Holder = styled(FlexBox)`
 const Navigation__Wide__Screen__Holder = styled(FlexBox)`
   display: none;
   height: 100%;
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     display: flex;
-    gap: 0 35px;
-    margin-left: 65px;
+    gap: 0 25px;
+    margin-left: 45px;
   }
 `
 const Navigation__Small__Screen__Holder = styled(FlexBox)`
   display: flex;
   height: 100%;
   margin-left: auto;
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     display: none;
   }
 `
@@ -49,6 +49,7 @@ const Menu__Bars__Icon = styled(FontAwesomeIcon)`
 `
 const Navigation__Wide__Screen__Option = styled(Text)`
   font-size: 18px;
+  font-weight: bold;
   margin: auto 0;
   cursor: pointer;
 `
@@ -77,6 +78,8 @@ const Navigation__Drop__Down__Option = styled(Text)`
 `
 const Navigation__Drop__Down__Icon = styled(FontAwesomeIcon)`
   margin-right: 5px;
+  height: 19px;
+  width: 19px;
 `
 
 

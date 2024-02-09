@@ -22,6 +22,7 @@ const Navigation = () => {
         <Styled.Navigation__Wide__Screen__Holder>
             {navigationOptions.map((option: any) => (
                 <Tooltip
+                    trigger={'onclick, mouseenter'}
                     key={`navigation_bar_option_${option.label}`}
                     interactive={true}
                     arrow={false}
