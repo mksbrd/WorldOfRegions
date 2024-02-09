@@ -12,8 +12,13 @@ const Main__Page__Lower__Content__Holder = styled(FlexBox)`
     flex-direction: column;
   }
 `
+const Main__Page__Content__left__Side = styled(FlexBox)`
+  flex-direction: column;
+  width: available;
+`
 
 export const Styled = {
+    Main__Page__Content__left__Side,
     Main__Page__Lower__Content__Holder,
     Main__Page__Content__Holder
 }

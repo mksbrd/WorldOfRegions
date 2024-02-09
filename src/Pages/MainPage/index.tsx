@@ -1,9 +1,8 @@
 import PageHolder from "../../lib/UI/PageHolder";
 import ImageGallery from "./ImageGallery";
-import FirstArticles from "./FirstArticles";
 import {Main__Page__Context} from "../../lib/Context/ContextList";
-import {Styled} from "./MainPage.styles";
-import SideData from "./SideData";
+import NonSeparatedPart from "./NonSeparatedPart";
+import SeparatedPart from "./SeparatedPart";
 
 const MainPage = () => {
 
@@ -107,10 +106,8 @@ const MainPage = () => {
         <Main__Page__Context.Provider value={mainPageContextValue as any}>
             <PageHolder>
                 <ImageGallery/>
-                <Styled.Main__Page__Lower__Content__Holder>
-                    <FirstArticles/>
-                    <SideData/>
-                </Styled.Main__Page__Lower__Content__Holder>
+                <SeparatedPart/>
+                <NonSeparatedPart/>
             </PageHolder>
         </Main__Page__Context.Provider>
     )

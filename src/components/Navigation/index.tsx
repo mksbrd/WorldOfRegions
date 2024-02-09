@@ -3,6 +3,9 @@ import PageHolder from "../../lib/UI/PageHolder";
 import WorldOfRegionsLogo from "../WorldOfRegionsLogo";
 import {faBars} from "@fortawesome/pro-solid-svg-icons";
 import useNavigation from "../../lib/Hooks/useNavigation";
+import Tooltip from "../../lib/UI/Tooltip";
+import NavigationToolTipContents from "./NavigationToolTipContent";
+
 
 const Navigation = () => {
 
@@ -15,15 +18,20 @@ const Navigation = () => {
         toggleNavigationDrawer(true)
     }
 
-
     const wideScreenContent = (
         <Styled.Navigation__Wide__Screen__Holder>
             {navigationOptions.map((option: any) => (
-                <Styled.Navigation__Wide__Screen__Option
+                <Tooltip
                     key={`navigation_bar_option_${option.label}`}
+                    interactive={true}
+                    arrow={false}
+                    placement={'bottom-start'}
+                    content={<NavigationToolTipContents list={option.list}/>}
                 >
-                    {option.label}
-                </Styled.Navigation__Wide__Screen__Option>
+                    <Styled.Navigation__Wide__Screen__Option>
+                        {option.label}
+                    </Styled.Navigation__Wide__Screen__Option>
+                </Tooltip>
             ))}
         </Styled.Navigation__Wide__Screen__Holder>
     )

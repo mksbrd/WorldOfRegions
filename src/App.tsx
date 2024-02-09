@@ -5,6 +5,7 @@ import NavigationProvider from "./lib/Context/Providers/NavigationProvider";
 import {BrowserRouter} from "react-router-dom";
 import "./i18n";
 import AdditionalModules from "./components/AdditionalModules";
+import GlobalStyle from "./lib/Style/GlobalStyles";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <BrowserRouter>
                 <NavigationProvider>
                     <>
+                        <GlobalStyle/>
                         <WorldOfRegions/>
                         <AdditionalModules/>
                     </>

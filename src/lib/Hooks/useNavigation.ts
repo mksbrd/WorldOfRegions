@@ -15,13 +15,20 @@ const useNavigation = () => {
 
     const navigationOptions = [
         {
-            label: 'Discover'
+            label: 'Discover',
+            list: [
+                {
+                    title: "Countries"
+                }
+            ]
         },
         {
-            label: 'Exotic'
+            label: 'Exotic',
+            list: []
         },
         {
-            label: 'World'
+            label: 'World',
+            list: []
         }
 
     ]

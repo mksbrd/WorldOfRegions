@@ -51,10 +51,6 @@ const Navigation__Wide__Screen__Option = styled(Text)`
   font-size: 18px;
   margin: auto 0;
   cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `
 const Navigation__Drawer__Content__Holder = styled(FlexBox)`
   flex-direction: column;
@@ -63,10 +59,31 @@ const Navigation__Drawer__Content__Holder = styled(FlexBox)`
   @media (max-width: 400px) {
     min-width: 100vw;
   }
+`
+const Navigation__Drop__Down = styled(FlexBox)`
+  flex-direction: column;
+  min-width: 200px;
+  padding: 5px;
+  gap: 10px;
+`
+const Navigation__Drop__Down__Option = styled(Text)`
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
 `
+const Navigation__Drop__Down__Icon = styled(FontAwesomeIcon)`
+  margin-right: 5px;
+`
+
 
 export const Styled = {
+    Navigation__Drop__Down__Icon,
+    Navigation__Drop__Down__Option,
+    Navigation__Drop__Down,
     Navigation__Drawer__Content__Holder,
     Navigation__Wide__Screen__Option,
     Menu__Bars__Icon,

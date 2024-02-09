@@ -22,7 +22,7 @@ const First__Articles__Title = styled.h2`
 `
 
 const First__Articles__Holder = styled(FlexBox)`
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   @media (max-width: 400px) {
     flex-direction: column;
   }
@@ -36,7 +36,6 @@ const Article__Holder = styled(FlexBox)`
 
 `
 const Article__Image = styled(Image)`
-  height: 100%;
   height: 100px;
   width: 180px;
   flex-shrink: 0;
