@@ -30,7 +30,6 @@ const Article = (
                     <Styled.Article__Title>
                         {title}
                     </Styled.Article__Title>
-
                 </Styled.Content__Holder>
             </Styled.Article__Holder>
         </Styled.Anchor>

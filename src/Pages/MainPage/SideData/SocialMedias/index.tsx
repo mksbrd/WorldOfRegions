@@ -39,9 +39,6 @@ const SocialMedias = () => {
                     <Styled.Social__Media__Icon
                         icon={social.icon}
                     />
-                    <Styled.Social__Media__Title>
-                        {social.label}
-                    </Styled.Social__Media__Title>
                 </Styled.Social__Media__Anchor>
             ))}
         </Styled.Social__Media__Content__Holder>

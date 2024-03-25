@@ -11,10 +11,13 @@ import {
     faNewspaper,
     faUserTie
 } from "@fortawesome/pro-light-svg-icons";
+import {useNavigate} from "react-router-dom";
 
 const useNavigation = () => {
 
     const [navigationState, setNavigationState] = useContext<any>(Navigation__Context)
+
+    const navigate = useNavigate()
 
     const toggleNavigationDrawer = (bool: boolean) => {
         setNavigationState((state: any) => ({
@@ -48,22 +51,37 @@ const useNavigation = () => {
             list: [
                 {
                     title: 'Europe',
+                    onClick: () => {
+                        navigate('Europe')
+                    },
                     icon: faGlobeEurope
                 },
                 {
                     title: 'Asia',
+                    onClick: () => {
+                        navigate('Asia')
+                    },
                     icon: faGlobeAsia
                 },
                 {
                     title: 'Africa',
+                    onClick: () => {
+                        navigate('Africa')
+                    },
                     icon: faGlobeAfrica
                 },
                 {
                     title: 'America',
+                    onClick: () => {
+                        navigate('America')
+                    },
                     icon: faGlobeAmericas
                 },
                 {
                     title: 'Oceania',
+                    onClick: () => {
+                        navigate('Oceania')
+                    },
                     icon: faGlobeOceania
                 }
             ]

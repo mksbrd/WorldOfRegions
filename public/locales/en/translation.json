@@ -1,4 +1,25 @@
 {
   "lbl_quick_vacation": "Quick vacations",
-  "lbl_social_medias": "Follow Us On Social Media"
+  "lbl_social_medias": "Follow Us On Social Media",
+  "lbl_country_list": "Countries",
+  "lbl_numberOfRegions": "Available Regions",
+  "lbl_population": "Population",
+  "lbl_availAbleHotels": "Available Hotels",
+  "lbl_capital": "Capital",
+  "lbl_food": "Famous Food",
+  "lbl_currency": "Currency",
+  "lbl_about_continent": "About",
+  "lbl_continent_placeholder": "Country Name",
+  "lbl_MainInfo": "Quick Overview",
+  "lbl_RegionList": "Regions",
+  "lbl_GeneralInformation": "Travel Information",
+  "lbl_Articles": "Articles",
+  "lbl_ImageGallery": "Images Gallery",
+  "lbl_govLink": "Country Gov",
+  "lbl_area": "Land Area",
+  "lbl_notableCities": "Known Cities",
+  "lbl_famousFor": "Famous For",
+  "lbl_landmarks": "Important Landmarks",
+  "lbl_show_more_articles": "Show More Articles",
+  "lbl_Offers": "Offers"
 }

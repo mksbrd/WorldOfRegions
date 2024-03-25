@@ -12,7 +12,9 @@ const NavigationToolTipContents = (
     return (
         <Styled.Navigation__Drop__Down>
             {list.map((option: any) => (
-                <Styled.Navigation__Drop__Down__Option>
+                <Styled.Navigation__Drop__Down__Option
+                    onClick={option?.onClick}
+                >
                     <Styled.Navigation__Drop__Down__Icon
                         icon={option.icon}
                     />

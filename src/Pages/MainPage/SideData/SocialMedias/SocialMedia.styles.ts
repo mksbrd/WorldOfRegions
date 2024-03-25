@@ -21,8 +21,8 @@ const Social__Media__Icon = styled(FontAwesomeIcon)`
   height: 25px;
   color: ${({theme}) => theme.color};
   @media (max-width: 900px) {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     margin: 0 auto 10px auto;
   }
 `

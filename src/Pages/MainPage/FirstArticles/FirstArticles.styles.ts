@@ -9,7 +9,7 @@ const First__Articles__Title = styled.h2`
   color: ${({theme}) => theme.color};
   font-weight: bold;
   padding: 0 10px;
-  margin: 5px 0;
+  margin: 15px 0 5px 0;
   @media (min-width: 1100px) {
     font-size: 27px;
   }

@@ -5,6 +5,7 @@ import {faBars} from "@fortawesome/pro-solid-svg-icons";
 import useNavigation from "../../lib/Hooks/useNavigation";
 import Tooltip from "../../lib/UI/Tooltip";
 import NavigationToolTipContents from "./NavigationToolTipContent";
+import {useNavigate} from "react-router-dom";
 
 
 const Navigation = () => {
@@ -18,6 +19,8 @@ const Navigation = () => {
         toggleNavigationDrawer(true)
     }
 
+    const navigate = useNavigate()
+
     const wideScreenContent = (
         <Styled.Navigation__Wide__Screen__Holder>
             {navigationOptions.map((option: any) => (
@@ -25,7 +28,6 @@ const Navigation = () => {
                     trigger={'onclick, mouseenter'}
                     key={`navigation_bar_option_${option.label}`}
                     interactive={true}
-                    arrow={false}
                     placement={'bottom-start'}
                     content={<NavigationToolTipContents list={option.list}/>}
                 >
@@ -53,7 +55,9 @@ const Navigation = () => {
                 <PageHolder>
                     <Styled.Navigation__Content__Holder>
                         <Styled.Logo__Positioner>
-                            <WorldOfRegionsLogo/>
+                            <WorldOfRegionsLogo
+                                onClick={() => navigate('/')}
+                            />
                         </Styled.Logo__Positioner>
                         {smallScreenContent}
                         {wideScreenContent}

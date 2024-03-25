@@ -21,21 +21,30 @@ const Side__Data__Holder = styled(FlexBox)`
 
 const Section__Titles = styled(Text)`
   font-size: 22px;
+  padding-top: 0;
+  padding-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+
+  @media (max-width: 900px) {
+    text-align: left;
+    padding-top: 15px;
+  }
+`
+const Social_Media__Title = styled(Text)`
+  font-size: 22px;
   padding-top: 20px;
   padding-bottom: 10px;
   font-weight: bold;
   text-align: center;
 
-  &:first-of-type {
-    padding-top: 0;
-  }
-
   @media (max-width: 900px) {
-    text-align: left;
+    text-align: center;
   }
 `
 
 export const Styled = {
+    Social_Media__Title,
     Side__Data__Holder,
     Section__Titles
 }

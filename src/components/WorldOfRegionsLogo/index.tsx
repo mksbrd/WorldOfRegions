@@ -4,10 +4,19 @@ import {faGlobe} from "@fortawesome/pro-solid-svg-icons";
 import FlexBox from "../../lib/UI/FlexBox";
 
 
-const WorldOfRegionsLogo = () => {
+type logoProps = {
+    onClick?: () => void
+}
+
+const WorldOfRegionsLogo = (
+    {
+        onClick
+    }: logoProps
+) => {
 
     return (
         <FlexBox
+            onClick={onClick}
             style={{
                 height: '50px',
                 width: '150px',

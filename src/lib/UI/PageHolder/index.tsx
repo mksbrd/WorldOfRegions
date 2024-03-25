@@ -1,4 +1,5 @@
 import {Styled} from "./PageHolder.styles";
+import React from "react";
 
 
 type PageHolderProps = {
@@ -7,7 +8,7 @@ type PageHolderProps = {
 
 const PageHolder = (
     {
-        children
+        children,
     }: PageHolderProps) => {
 
     return (

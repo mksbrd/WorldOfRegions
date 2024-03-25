@@ -3,12 +3,12 @@ import FlexBox from "../../../lib/UI/FlexBox";
 import Image from "../../../lib/UI/Image";
 
 const Advertisement__Box__Holder = styled(FlexBox)`
-  width: 879px;
+  width: calc(100% - 10px);
   height: 219px;
-  background-color: rebeccapurple;
+  margin: 0 5px;
   @media (max-width: 1100px) {
-    height: calc((100vw - 221px) / 4);
-    width: calc(100vw - 221px);
+    height: calc((100vw - 231px) / 4);
+    width: calc(100vw - 231px);
   }
   @media (max-width: 900px) {
     width: 100vw;

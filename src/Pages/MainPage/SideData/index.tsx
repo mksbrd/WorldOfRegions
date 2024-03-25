@@ -13,9 +13,9 @@ const SideData = () => {
                 {t('lbl_quick_vacation')}
             </Styled.Section__Titles>
             <QuickIdeas/>
-            <Styled.Section__Titles>
+            <Styled.Social_Media__Title>
                 {t('lbl_social_medias')}
-            </Styled.Section__Titles>
+            </Styled.Social_Media__Title>
             <SocialMedias/>
         </Styled.Side__Data__Holder>
     )
